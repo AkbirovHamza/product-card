@@ -1,7 +1,11 @@
+/* Универсальный селектор — для всех элементов */
+* {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
 /* Вся страница */
 body {
     background-color: #f5f5f5;
-    font-family: 'Montserrat', Arial, sans-serif;
     padding: 40px;
     margin: 0;
 }
@@ -12,9 +16,9 @@ body {
     margin: 0 auto;
 }
 
+/* Заголовок h1 */
 h1 {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: normal;          /* Regular */
+    font-weight: normal;
     font-size: 70px;
     line-height: 78px;
     color: #515076;
@@ -34,11 +38,11 @@ h1 {
 
 /* Карточка */
 .card {
-    background-color: #fafafa;   /* очень светлый серый (почти белый) */
+    background-color: #fafafa;
     width: 270px;
     padding: 18px;
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Картинка */
@@ -49,7 +53,6 @@ h1 {
 
 /* Бейджик */
 .inf {
-    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: normal;
     font-size: 12px;
     line-height: 24px;
@@ -60,7 +63,6 @@ h1 {
 
 /* Название */
 .prod {
-    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: bold;
     font-size: 20px;
     line-height: 27px;
@@ -70,7 +72,6 @@ h1 {
 
 /* Описание */
 .set {
-    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: normal;
     font-size: 13px;
     line-height: 18px;
@@ -80,7 +81,6 @@ h1 {
 
 /* Слово "Состав" */
 .composition {
-    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: normal;
     font-size: 13px;
     line-height: 18px;
@@ -97,7 +97,6 @@ h1 {
 }
 
 .compos li {
-    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: normal;
     font-size: 13px;
     line-height: 18px;
@@ -105,9 +104,8 @@ h1 {
     margin-bottom: 5px;
 }
 
-/* Слово "Цена" (слева) */
+/* Слово "Цена" */
 .price {
-    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
@@ -118,12 +116,11 @@ h1 {
 
 /* Цифра цены */
 .price-prod {
-    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
     color: #515076;
     display: inline-block;
-    margin-left: 70px;      /* было 15px, стало 30px */
+    margin-left: 40px;
     margin-top: 12px;
 }
