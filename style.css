@@ -1,22 +1,18 @@
-/* Универсальный селектор — для всех элементов */
 * {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* Вся страница */
 body {
     background-color: #f5f5f5;
     padding: 40px;
     margin: 0;
 }
 
-/* Контейнер для центрирования */
 .container {
     max-width: 900px;
     margin: 0 auto;
 }
 
-/* Заголовок h1 */
 h1 {
     font-weight: normal;
     font-size: 70px;
@@ -26,7 +22,6 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* Каждый ряд карточек */
 .row {
     list-style: none;
     display: flex;
@@ -36,7 +31,6 @@ h1 {
     padding: 0;
 }
 
-/* Карточка */
 .card {
     background-color: #fafafa;
     width: 270px;
@@ -45,13 +39,11 @@ h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Картинка */
 .image {
     width: 100%;
     border-radius: 12px;
 }
 
-/* Бейджик */
 .inf {
     font-weight: normal;
     font-size: 12px;
@@ -61,7 +53,6 @@ h1 {
     margin-top: 12px;
 }
 
-/* Название */
 .prod {
     font-weight: bold;
     font-size: 20px;
@@ -70,7 +61,6 @@ h1 {
     margin: 12px 0 8px;
 }
 
-/* Описание */
 .set {
     font-weight: normal;
     font-size: 13px;
@@ -79,7 +69,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Слово "Состав" */
 .composition {
     font-weight: normal;
     font-size: 13px;
@@ -89,7 +78,6 @@ h1 {
     margin-top: 12px;
 }
 
-/* Список ингредиентов */
 .compos {
     padding-left: 20px;
     margin-top: 5px;
@@ -104,7 +92,6 @@ h1 {
     margin-bottom: 5px;
 }
 
-/* Слово "Цена" */
 .price {
     font-weight: bold;
     font-size: 20px;
@@ -114,7 +101,6 @@ h1 {
     margin-top: 12px;
 }
 
-/* Цифра цены */
 .price-prod {
     font-weight: normal;
     font-size: 20px;
