@@ -1,0 +1,62 @@
+.card {
+    background-color: lab(100% 0.01 -0.01);
+    width: 290px; 
+    padding: 18px;
+    border-radius: 20px; /* закругление рамки*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card__image {
+    width: 100%; /* картинка растягивается на всю ширину карточки */
+    border-radius: 12px; 
+}
+
+.card__purpose {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 24px;
+    color: #A5A3B9;
+    display: inline-block;  /*элемент ведёт себя как строчный */
+    margin-top: 12px; /*  отступ СВЕРХУ ОТ КАРТИНКИ*/
+    text-transform: uppercase;
+}
+
+.card__name {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    color: #515076;
+    margin: 12px 0 8px;
+}
+
+.card__actions {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #515076;
+    margin-bottom: 10px;
+}
+
+.card__composition {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #515076;
+    display: block;
+    margin-top: 12px;
+}
+
+.card__ingredients {
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.card__ingridiens li {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #515076;
+    margin-bottom: 5px;
+}
+

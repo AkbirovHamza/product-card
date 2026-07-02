@@ -4,91 +4,97 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="card.css">
+  <link rel="stylesheet" href="title.css">
+  <link rel="stylesheet" href="price.css">
+  <link rel="stylesheet" href="bgimage.css">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Выберите свой продукт</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Выберите свой продукт</h1>
 
+  <div class="container">
+    <img class="bg-image" src="flowers.png" alt="Фон">
+    <h1>Выберите свой продукт</h1>
     <ul class="row">
       <li class="card">
-        <img class="image" src="moisturizing_mousse.png" alt="Увлажняющий мусс">
-        <span class="inf">для нормальной кожи</span>
-        <h2 class="prod">Увлажняющий мусс</h2>
-        <p class="set">Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
-        <span class="composition">Состав:</span>
-        <ul class="compos">
+        <img class="card__image" src="moisturizing_mousse.png" alt="Увлажняющий мусс">
+        <span class="card__purpose">для нормальной кожи</span>
+        <h2 class="card__name">Увлажняющий мусс</h2>
+        <p class="card__actions">Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
+        <span class="card__composition">Состав:</span>
+        <ul class="card__ingredients">
           <li>активные натуральные комплексы</li>
           <li>витамины С, А, РР, В и Е</li>
           <li>солнцезащитные компоненты</li>
         </ul>
         <span class="price">Цена</span>
-        <span class="price-prod">2750 &#8381;</span>
+        <span class="price__figure">2750 &#8381;</span>
       </li>
 
       <li class="card">
-        <img class="image" src="Moisturizing_mask.png" alt="Увлажняющая маска">
-        <span class="inf">для нормальной кожи</span>
-        <h2 class="prod">Увлажняющая маска</h2>
-        <p class="set">Способствует удерживанию влаги в верхних слоях кожи.</p>
-        <span class="composition">Состав:</span>
-        <ul class="compos">
+        <img class="card__image" src="Moisturizing_mask.png" alt="Увлажняющая маска">
+        <span class="card__purpose">для нормальной кожи</span>
+        <h2 class="card__name">Увлажняющая маска</h2>
+        <p class="card__actions">Способствует удерживанию влаги в верхних слоях кожи.</p>
+        <span class="card__composition">Состав:</span>
+        <ul class="card__ingredients">
           <li>воски</li>
           <li>минералы</li>
           <li>масла</li>
         </ul>
         <span class="price">Цена</span>
-        <span class="price-prod">3 500 &#8381;</span>
+        <span class="price__figure">3 500 &#8381;</span>
       </li>
 
       <li class="card">
-        <img class="image" src="wash_gel.png" alt="Гель для умывания">
-        <span class="inf">для жирной кожи</span>
-        <h2 class="prod">Гель для умывания</h2>
-        <p class="set">Интенсивно очищает, не повреждает защитный барьер кожи.</p>
-        <span class="composition">Состав:</span>
-        <ul class="compos">
+        <img class="card__image" src="wash_gel.png" alt="Гель для умывания">
+        <span class="card__purpose">для жирной кожи</span>
+        <h2 class="card__name">Гель для умывания</h2>
+        <p class="card__actions">Интенсивно очищает, не повреждает защитный барьер кожи.</p>
+        <span class="card__composition">Состав:</span>
+        <ul class="card__ingredients">
           <li>минералы</li>
           <li>витамины С, А, РР, В и Е</li>
           <li>солнцезащитные компоненты</li>
         </ul>
         <span class="price">Цена</span>
-        <span class="price-prod">1 650 &#8381;</span>
+        <span class="price__figure">1 650 &#8381;</span>
       </li>
     </ul>
 
     <ul class="row">
       <li class="card">
-        <img class="image" src="Gift_set_No_1.png" alt="Подарочный набор №1">
-        <span class="inf">для сухой кожи</span>
-        <h2 class="prod">Подарочный набор №1</h2>
-        <p class="set">Набор, состоящий из увлажняющего крема и маски.</p>
-        <span class="composition">Состав:</span>
-        <ul class="compos">
+        <img class="card__image" src="Gift_set_No_1.png" alt="Подарочный набор №1">
+        <span class="card__purpose">для сухой кожи</span>
+        <h2 class="card__name">Подарочный набор №1</h2>
+        <p class="card__actions">Набор, состоящий из увлажняющего крема и маски.</p>
+        <span class="card__composition">Состав:</span>
+        <ul class="card__ingredients">
           <li>воски</li>
           <li>минералы</li>
           <li>масла</li>
         </ul>
         <span class="price">Цена</span>
-        <span class="price-prod">4 750 &#8381;</span>
+        <span class="price__figure">4 750 &#8381;</span>
       </li>
 
       <li class="card">
-        <img class="image" src="Gift_set_No_5.png" alt="Подарочный набор №5">
-        <span class="inf">для всех типов</span>
-        <h2 class="prod">Подарочный набор №5</h2>
-        <p class="set">Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.</p>
-        <span class="composition">Состав:</span>
-        <ul class="compos">
+        <img class="card__image" src="Gift_set_No_5.png" alt="Подарочный набор №5">
+        <span class="card__purpose">для всех типов</span>
+        <h2 class="card__name">Подарочный набор №5</h2>
+        <p class="card__actions">Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.</p>
+        <span class="card__composition">Состав:</span>
+        <ul class="card__ingredients">
           <li>воски</li>
           <li>минералы</li>
           <li>масла</li>
         </ul>
         <span class="price">Цена</span>
-        <span class="price-prod">7 520 &#8381;</span>
+        <span class="price__figure">7 520 &#8381;</span>
       </li>
     </ul>
   </div>
