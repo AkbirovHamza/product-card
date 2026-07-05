@@ -1,0 +1,10 @@
+/* reset.css — обнуляющие стили */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+body {
+    margin: 0;
+}
