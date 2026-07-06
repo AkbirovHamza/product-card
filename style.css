@@ -151,7 +151,7 @@ h1 {
 }
 
 
-/*  кнопки */
+/*  кнопки для 7го пункта */
 
 .button__blue {
     background-color: blue;
@@ -159,4 +159,17 @@ h1 {
 
 .button__red {
     background-color: red;
+}
+
+
+/* 2й пункт*/
+
+.changeColorCard {
+    background-color: #be0d0d;
+}
+
+/* 3й пункт*/
+
+.changeColorCards {
+    background-color: #0dc735;
 }
