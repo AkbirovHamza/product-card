@@ -1,74 +1,52 @@
-
-
-
-//  пункт 2 
-
+// ===== ПУНКТ 2 =====
 const cardNum1 = document.querySelector('#cardNum1');
 const changeColorCardBut = document.querySelector('#changeColorCard');
-const red = '#be0d0d'
+const firstCardColor = '#be0d0d';
 
-
-
-
-changeColorCardBut.addEventListener('click', function() {
-    cardNum1.style.backgroundColor = red;
+changeColorCardBut.addEventListener('click', () => {
+    cardNum1.style.backgroundColor = firstCardColor;
 });
 
-
-//  пункт 3
-
+// ===== ПУНКТ 3 =====
 const allCards = document.querySelectorAll('.card');
 const changeColorCardsBut = document.querySelector('#changeColorCards');
-const green = '#0dc735'
+const allCardsColor = '#0dc735';
 
-changeColorCardsBut.addEventListener('click', function() {
-    allCards.forEach(function(card) {
-        card.style.backgroundColor = green;
+changeColorCardsBut.addEventListener('click', () => {
+    allCards.forEach((card) => {
+        card.style.backgroundColor = allCardsColor;
     });
 });
 
+// ===== ПУНКТ 4 =====
+const openGoogle = document.querySelector('#OpenGoogle');
 
-//  пункт 4
-
-const OpenGoogle = document.querySelector('#OpenGoogle');
-
-OpenGoogle.addEventListener('click', function() {
+openGoogle.addEventListener('click', () => {
     window.open('https://www.google.com/');
 });
 
-
-//  пункт 5 
-
+// ===== ПУНКТ 5 =====
 const outputConsoleLog = document.querySelector('#outputConsoleLog');
 
-outputConsoleLog.addEventListener('click', function(){
-    outPutConsoleLog('Привет это мое ДЗ')
-})
-
-function outPutConsoleLog(massage) {
-    alert('ДЗ №6')
-    console.log(massage)
-} 
-
-
-
-
-
-//  пункт 6
-
-const head = document.querySelector('#heading');
-
-head.addEventListener('mouseenter', function() {
-    console.log(head.textContent)
+outputConsoleLog.addEventListener('click', () => {
+    outPutConsoleLog('Привет это мое ДЗ');
 });
 
+function outPutConsoleLog(message) {
+    alert('ДЗ №6');
+    console.log(message);
+}
 
+// ===== ПУНКТ 6 =====
+const head = document.querySelector('#heading');
 
+head.addEventListener('mouseenter', () => {
+    console.log(head.textContent);
+});
 
-//  пункт 7
-
+// ===== ПУНКТ 7 =====
 const changeColorButton = document.querySelector('#changeColor');
 
-changeColorButton.addEventListener('click', function() {
+changeColorButton.addEventListener('click', () => {
     changeColorButton.classList.toggle('button__red');
 });
