@@ -1,9 +1,9 @@
 // === пункт 3 === 
 
-function massage(city, temperature) {
-    console.log(`Сейчас в ${city} температура — ${temperature} градусов по Цельсию`);   
+function showWeather(city, temperature) {
+    console.log(`Сейчас в ${city} температура — ${temperature} градусов по Цельсию`);
 }
-massage('Москве', 35);
+showWeather('Москве', 35);
 
 // === пункт 4 === 
 
@@ -27,12 +27,12 @@ checkSpeed(299792458);
 const product__name = "Телефон";
 const product__price = 50000;
 
-function buyProduct(Budget) {
-    if (Budget > product__price) {
+function buyProduct(budget) {
+    if (budget > product__price) {
         console.log(`${product__name} приобретен, Спасибо за покупку!`);
     }
     else {
-        let difference = product__price - Budget;
+        let difference = product__price - budget;
         console.log(`Вам не хватает ${difference}, пополните баланс`);
     }
 
