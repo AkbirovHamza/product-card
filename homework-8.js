@@ -28,13 +28,13 @@ console.log(carInfo);
 
 // === Пункт 5 ===
 
-function checkingCarSpeed(carInfo) {
+function checkCarSpeed(carInfo) {
     if (carInfo.maxSpeed === undefined) {
         carInfo.maxSpeed = 300;
     }
 }
  
-checkingCarSpeed(carInfo);
+checkCarSpeed(carInfo);
 
 // === Пункт 6 ===
 
