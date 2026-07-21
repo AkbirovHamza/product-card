@@ -1,3 +1,5 @@
+import { commentsData } from './comments.js';
+
 //=== Уровень 1 пункт 2===
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -15,18 +17,16 @@ console.log(result);
 
 //=== Уровень 1 пункт 4===
 
-function reverse(array) {
+function reverseArray(array) {
   return array.reverse();
 }
-const numbersResult = reverse(numbers);
-const amdVideoСardsResult = reverse(amdVideoСards);
+const numbersResult = reverseArray(numbers);
+const amdVideoСardsResult = reverseArray(amdVideoСards);
 
 console.log(numbersResult);
 console.log(amdVideoСardsResult);
 
 //=== Уровень 2 пункт 7===
-
-import { commentsData } from './comments.js';
 
 const emailCom = commentsData.filter((comment) => {
   return comment.email.includes('.com');
@@ -36,55 +36,52 @@ console.log(emailCom);
 //=== Уровень 2 пункт 8===
 
 const commentsId = commentsData.map((comment) => {
-  if (comment.id <= 5) {
-    comment.postId = 2 }
-  else if (comment.id > 5) {
-    comment.postId = 1 }
-    return comment;
+  comment.postId = comment.id <= 5 ? 2 : 1;
+  return comment;
 });
 console.log(commentsId);
 
 //=== Уровень 2 пункт 9===
 
-const IdName = commentsData.map((comment) => {
-  return ({
+const commentNames = commentsData.map((comment) => {
+  return {
     id: comment.id,
     name: comment.name
+  };
 });
-});
-console.log(IdName);
+console.log(commentNames);
 
 //=== Уровень 2 пункт 10===
 
-const bodySize = commentsData.map((comment) => {
+const validatedComments = commentsData.map((comment) => {
   if (comment.body.length > 180) {
-    comment.isInvalid = true
+    comment.isValid = true
   } else {
-    comment.isInvalid = false 
+    comment.isValid = false 
   } 
   return comment;
 });
-console.log(bodySize);
+console.log(validatedComments);
 
 //=== Уровень 3 пункт 11===
 
-const allEmails = commentsData.reduce((mailСounter, comment) => {
+const commentEmails = commentsData.reduce((mailСounter, comment) => {
    mailСounter.push(comment.email); 
    return mailСounter;
 },[]);
-console.log(allEmails);
+console.log(commentEmails);
 
-const allEmails2 = commentsData.map((comment) => {
+const commentEmails2 = commentsData.map((comment) => {
    return comment.email;
 });
-console.log(allEmails2);
+console.log(commentEmails2);
 
 //=== Уровень 3 пункт 12===
 
-const toStringEmails = allEmails.join(' - ');
+const toStringEmails = commentEmails.join(' - ');
 console.log(toStringEmails);
 
-const toStringEmails2 = allEmails2.join();
+const toStringEmails2 = commentEmails2.join();
 console.log(toStringEmails2);
 
 
