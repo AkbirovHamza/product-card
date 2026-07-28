@@ -1,43 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="general.css">
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
   <title>Выберите свой продукт</title>
 </head>
 <body>
   <div class="container">
-    <img class="bg-image" src="flowers.png" alt="Фон">
-    <h1 id="heading">Выберите свой продукт</h1>
+    <h1>Выберите свой продукт</h1>
 
-    <button id="changeColor" class="button__blue">Нажми на кнопку</button>
-    <button id="changeColorCard">поменять цвет карточки</button>
-    <button id="changeColorCards">поменять цвет карточек</button>
-    <button id="OpenGoogle">Открыть гугл</button>
-    <button id="outputConsoleLog">Вывести в консоль</button>
+    <!-- ПУНКТ 3: ШАБЛОН (скрыт) -->
+    <template id="cardTemplate">
+      <li class="card">
+        <img class="card__image" src="" alt="" />
+        <span class="card__purpose"></span>
+        <h2 class="card__name"></h2>
+        <p class="card__actions"></p>
+        <span class="card__composition">Состав:</span>
+        <ul class="card__ingredients"></ul>
+        <span class="price">Цена</span>
+        <span class="price__figure"></span>
+      </li>
+    </template>
 
- 
-    <ul class="row" id="cardRow1"></ul>
-    <ul class="row" id="cardRow2"></ul>
+    <!-- КОНТЕЙНЕР ДЛЯ КАРТОЧЕК -->
+    <ul class="row" id="cardRow"></ul>
   </div>
-<!-- Пункт 3 -->
-  <template id="cardTemplate">
-    <li class="card">
-      <img class="card__image" src="" alt="">
-      <span class="card__purpose"></span>
-      <h2 class="card__name"></h2>
-      <p class="card__actions"></p>
-      <span class="card__composition">Состав:</span>
-      <ul class="card__ingredients"></ul>
-      <span class="price">Цена</span>
-      <span class="price__figure"></span>
-    </li>
-  </template>
 
   <script type="module" src="homework-10.js"></script>
 </body>
