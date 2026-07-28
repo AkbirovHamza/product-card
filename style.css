@@ -1,4 +1,3 @@
-/* ОБЩИЕ СТИЛИ */
 * {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
@@ -24,19 +23,17 @@ h1 {
     margin: 150px 0 40px;
 }
 
-/* РЯД КАРТОЧЕК */
 .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;           /* ← перенос карточек */
     justify-content: center;
     gap: 20px;
-    max-width: 580px;      /* 2 карточки в ряд */
+    max-width: 920px;          /* ← 3 карточки в ряд */
     margin: 0 auto;
     list-style: none;
     padding: 0;
 }
 
-/* КАРТОЧКА */
 .card {
     flex: 0 0 270px;
     background: #fff;
@@ -97,7 +94,7 @@ h1 {
     font-weight: bold;
     font-size: 20px;
     color: #515076;
-    display: inline-block;
+    display: inline-block;    /* ← не переносит строку */
     margin-top: 12px;
 }
 
@@ -105,12 +102,11 @@ h1 {
     font-weight: normal;
     font-size: 20px;
     color: #515076;
-    display: inline-block;
-    margin-left: 40px;
+    display: inline-block;    /* ← не переносит строку */
+    margin-left: 100px;         /* ← маленький отступ от слова "Цена" */
     margin-top: 12px;
 }
 
-/* ФОН (не трогай) */
 .bg-image {
     position: absolute;
     top: -50%;
