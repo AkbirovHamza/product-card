@@ -1,79 +1,63 @@
 * {
-    font-family: 'Montserrat', Arial, sans-serif; /*шрифт Montserrat приоритет остальные если его нет*/
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
 body {
-    position: relative;
-    background-color: #ffffff;
+    background: #ffffff;
     padding: 40px;
-    margin: 0;
-    min-height: 100vh;     /* чтобы фон был на весь экран */
 }
 
 .container {
-    position: relative;
-    max-width: 1106px;
-    max-height: 1191px;
+    max-width: 1100px;
     margin: 0 auto;
 }
-
-
-.row {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 0 auto;
-    max-width: 900px;
-}
-
-
-
-/* заголовок */
 
 h1 {
     text-align: center;
-    font-weight: normal; /* жирность*/
-    font-size: 70px; /* размер*/
-    line-height: 78px; /*  отступ от текста*/
-    color: #515076; /* цвет*/
-    text-align: center; /* по центру*/
-    margin-top: 150px;
-    margin-bottom: 10px; /* отступ от заголовка до текста снизу*/
-    padding-bottom: 100px;
+    font-weight: normal;
+    font-size: 70px;
+    color: #515076;
+    margin: 150px 0 40px;
 }
 
-
-
-/* карточка */
+.row {
+    display: flex;
+    flex-wrap: wrap;           /* ← перенос карточек */
+    justify-content: center;
+    gap: 20px;
+    max-width: 920px;          /* ← 3 карточки в ряд */
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
 
 .card {
-    background-color: #ffffff;
-    width: 290px; 
+    flex: 0 0 270px;
+    background: #fff;
     padding: 18px;
-    border-radius: 20px; /* закругление рамки*/
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
 .card__image {
-    width: 100%; /* картинка растягивается на всю ширину карточки */
-    border-radius: 12px; 
+    width: 100%;
+    border-radius: 12px;
 }
 
 .card__purpose {
     font-weight: normal;
     font-size: 12px;
-    line-height: 24px;
     color: #A5A3B9;
-    display: inline-block;  /*элемент ведёт себя как строчный */
-    margin-top: 12px; /*  отступ СВЕРХУ ОТ КАРТИНКИ*/
     text-transform: uppercase;
+    margin-top: 12px;
 }
 
 .card__name {
     font-weight: bold;
     font-size: 20px;
-    line-height: 27px;
     color: #515076;
     margin: 12px 0 8px;
 }
@@ -81,7 +65,6 @@ h1 {
 .card__actions {
     font-weight: normal;
     font-size: 13px;
-    line-height: 18px;
     color: #515076;
     margin-bottom: 10px;
 }
@@ -89,7 +72,6 @@ h1 {
 .card__composition {
     font-weight: normal;
     font-size: 13px;
-    line-height: 18px;
     color: #515076;
     display: block;
     margin-top: 12px;
@@ -104,72 +86,46 @@ h1 {
 .card__ingredients li {
     font-weight: normal;
     font-size: 13px;
-    line-height: 18px;
     color: #515076;
     margin-bottom: 5px;
 }
 
-
-
-
-/* цена */
-
-
-
 .price {
     font-weight: bold;
     font-size: 20px;
-    line-height: 24px;
     color: #515076;
-    display: inline-block;
+    display: inline-block;    /* ← не переносит строку */
     margin-top: 12px;
 }
 
 .price__figure {
     font-weight: normal;
     font-size: 20px;
-    line-height: 24px;
     color: #515076;
-    display: inline-block;
-    margin-left: 40px;
+    display: inline-block;    /* ← не переносит строку */
+    margin-left: 100px;         /* ← маленький отступ от слова "Цена" */
     margin-top: 12px;
 }
 
-
-
-/* картинка */
-
 .bg-image {
     position: absolute;
-    top: -50%;                      /* сверху */
-    left: 10%;                   /* сначала ставим по центру */
-    
+    top: -50%;
+    left: 10%;
     width: 790px;
     height: 897px;
     border-radius: 30px;
-    z-index: -1;                 /* позади всего */
+    z-index: -1;
 }
-
-
-/*  кнопки для 7го пункта */
 
 .button__blue {
     background-color: blue;
 }
-
 .button__red {
     background-color: red;
 }
-
-
-/* 2й пункт*/
-
 .changeColorCard {
     background-color: #be0d0d;
 }
-
-/* 3й пункт*/
-
 .changeColorCards {
     background-color: #0dc735;
 }
