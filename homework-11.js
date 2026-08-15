@@ -35,7 +35,7 @@ overlay.addEventListener('click', function() {
     overlay.classList.remove('modal-showed');
 });
 
-// Уровень 2: пункт 5(2)
+// Уровень 2: пункт 5(2) — с Object.fromEntries()
 const registerForm = document.getElementById('registerForm');
 
 registerForm.addEventListener('submit', function(event) {
@@ -45,17 +45,13 @@ registerForm.addEventListener('submit', function(event) {
 
     const formData = new FormData(registerForm);
 
-    const firstName = formData.get('firstName');
-    const lastName = formData.get('lastName');
-    const birthDate = formData.get('birthDate');
-    const login = formData.get('login');
-    const password = formData.get('password');
-    const confirmPassword = formData.get('confirmPassword');
+    const user = Object.fromEntries(formData.entries());
+    user.createdOn = new Date();
 
-    console.log('Пароль:', password);
-    console.log('Повтор:', confirmPassword);
+    console.log('Пароль:', user.password);
+    console.log('Повтор:', user.confirmPassword);
 
-    if (password !== confirmPassword) {
+    if (user.password !== user.confirmPassword) {
         alert('Пароли не совпадают');
         return;
     }
@@ -64,15 +60,6 @@ registerForm.addEventListener('submit', function(event) {
         alert('Заполните все поля');
         return;
     }
-
-    const user = {
-        firstName,
-        lastName,
-        birthDate,
-        login,
-        password,
-        createdOn: new Date()
-    };
 
     console.log(user);
 
