@@ -1,5 +1,4 @@
-//Уровень 1: пункт 4
-
+// Уровень 1: пункт 4
 const form = document.getElementById('subscribeForm');
 
 form.addEventListener('submit', function(event) {
@@ -15,8 +14,7 @@ form.addEventListener('submit', function(event) {
     }
 });
 
-//Уровень 2: пункт 5(1)
-
+// Уровень 2: пункт 5(1)
 const modal = document.getElementById('modal');
 const overlay = document.getElementById('overlay');
 const openBtn = document.getElementById('registerBtn');
@@ -37,20 +35,25 @@ overlay.addEventListener('click', function() {
     overlay.classList.remove('modal-showed');
 });
 
-
-//Уровень 2: пункт 5(2)
-
+// Уровень 2: пункт 5(2)
 const registerForm = document.getElementById('registerForm');
 
 registerForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const birthDate = document.getElementById('birthDate').value;
-    const login = document.getElementById('login').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
+    console.log('Форма отправлена');
+
+    const formData = new FormData(registerForm);
+
+    const firstName = formData.get('firstName');
+    const lastName = formData.get('lastName');
+    const birthDate = formData.get('birthDate');
+    const login = formData.get('login');
+    const password = formData.get('password');
+    const confirmPassword = formData.get('confirmPassword');
+
+    console.log('Пароль:', password);
+    console.log('Повтор:', confirmPassword);
 
     if (password !== confirmPassword) {
         alert('Пароли не совпадают');
