@@ -27,6 +27,58 @@
     <ul class="row" id="cardRow"></ul>
   </div>
 
-  <script type="module" src="homework-10.js"></script>
+  <button id="registerBtn">Регистрация</button>
+
+  <div id="overlay" class="overlay"></div>
+
+  <div id="modal" class="modal">
+    <button id="closeModal" class="modal__close">✕</button>
+    <h2>Регистрация</h2>
+    <form id="registerForm">
+      <label>Имя: <input type="text" id="firstName" name="firstName" required /></label>
+      <label>Фамилия: <input type="text" id="lastName" name="lastName" required /></label>
+      <label>Дата рождения: <input type="date" id="birthDate" name="birthDate" required /></label>
+      <label>Логин: <input type="text" id="login" name="login" required /></label>
+      <label>Пароль: <input type="password" id="password" name="password" required /></label>
+      <label>Повтор пароля: <input type="password" id="confirmPassword" name="confirmPassword" required /></label>
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+  </div>
+
+  <footer class="container__footer">
+    <div class="footer-brand">
+      <p class="NameCards">Product Cards</p>
+      <p class="CardInfo">У нас самые лучшие продукты для кожи!</p>
+      <div>
+        <img src="telegaImg.png" class="telegaImg" alt="Telegram" />
+        <img src="vkImg.png" class="vkImg" alt="VK" />
+      </div>
+    </div>
+
+    <div class="footer-form">
+      <form id="subscribeForm">
+        <label class="subscribe" for="email">Подпишись на наши акции:</label>
+        <div>
+          <input type="email" id="email" placeholder="Введи Email..." required />
+          <button class="SubscribeBut" type="submit">Подписаться</button>
+        </div>
+        <hr class="footer-divider" />
+        <p>www.product-cards.com © all right reserve</p>
+      </form>
+    </div>
+
+    <div class="footer-nav">
+      <p class="fastHrefs">Быстрые ссылки</p>
+      <nav>
+        <ul>
+          <li><a class="href1" href="#">Главная</a></li>
+          <li><a class="href2" href="#">Магазин</a></li>
+          <li><a class="href3" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module" src="main.js"></script>
 </body>
 </html>

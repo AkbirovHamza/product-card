@@ -129,3 +129,225 @@ h1 {
 .changeColorCards {
     background-color: #0dc735;
 }
+
+
+.NameCards {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.CardInfo {
+    top: 144px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.telegaImg {
+    margin-top: 43px;
+}
+
+.vkImg {
+    margin-top: 43px;
+}
+
+.fastHrefs {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 23px;
+}
+
+.href1 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 17px;
+}
+
+.href2 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 17px;
+}
+
+.href3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.subscribe {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+#email {
+    width: 477px;
+    height: 61px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.SubscribeBut {
+    width: 124px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.container__footer {
+    width: 1728px;    /* ширина */
+    height: 477px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+    background-color: #3A3A3A;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    margin-bottom: 8px;
+}
+
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.overlay.modal-showed {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    z-index: 101;
+    width: 400px;
+}
+
+.modal-showed {
+    display: block;
+}
+
+
+.footer-form div {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.footer-form input {
+    flex: 1;
+    border: none;
+    padding: 10px 16px;
+    outline: none;
+    font-size: 16px;
+    min-width: 200px;
+}
+
+.footer-form button {
+    background: transparent;   
+    color: #000000;              
+    border: none;   
+    padding: 6px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    border-left: 1px solid #000000;
+}
+
+.footer-divider {
+    border: none;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    width: 55px;   /* или 50% */
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 10px;
+}
+
+
+.footer-form p {
+    margin-top: 30px;
+    margin-left: 120px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    width: 376px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#registerForm label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+#registerForm input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#registerForm button {
+    background: #0077ff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+#registerForm button:hover {
+    background: #005fcc;
+}
