@@ -13,13 +13,7 @@ export class Modal {
 
   close() {
     this.modal.classList.remove('modal-showed');
-
-  
-    const openedModals = document.querySelectorAll('.modal-showed');
-
-    if (openedModals.length === 0) {
-      this.overlay.classList.remove('overlay-showed');
-    }
+    this.overlay.classList.remove('overlay-showed');
   }
 
   isOpen() {
@@ -27,27 +21,21 @@ export class Modal {
   }
 
   #initClose() {
-    // Крестик закрывает именно эту модалку
-    const closeButton = this.modal.querySelector('.modal-close-button');
-
-    if (closeButton) {
-      closeButton.addEventListener('click', () => {
-        this.close();
-      });
+    const closeBtn = this.modal.querySelector('.modal-close-button');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            this.close();
+        });
     }
 
-    // Оверлей закрывает любую открытую модалку
+
     this.overlay.addEventListener('click', () => {
-      const openedModals = document.querySelectorAll('.modal-showed');
-
-      openedModals.forEach((modal) => {
-        modal.classList.remove('modal-showed');
-      });
-
       this.overlay.classList.remove('overlay-showed');
-    });
+      this.close();
+  })
   }
 
+ 
   #initOpen(buttonId) {
     const openButton = document.getElementById(buttonId);
 
