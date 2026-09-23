@@ -20,13 +20,25 @@ async function getUsers() {
       }
       const data = await response.json();
       usersData = data.users;
-      const ussData = JSON.stringify(usersData);
-      localStorage.setItem('users', ussData);
+      const usersJson = JSON.stringify(usersData);
+      localStorage.setItem('users', usersJson);
     } else {
         usersData  = JSON.parse(users);
       }
     massageContainer.textContent = '';
-    usersContainer.innerHTML = '';
+
+    renderUsers(usersData);
+
+
+  } catch (error) {
+      massageContainer.textContent = 'Ошибка при загрузке данных';
+  }
+}
+
+
+function renderUsers(usersData) {
+  usersContainer.innerHTML = '';
+
 
     usersData.forEach(item => {
       const userElement = document.createElement('div');
@@ -34,9 +46,7 @@ async function getUsers() {
       deleteUserBtn.textContent = 'Удалить';
 
       deleteUserBtn.addEventListener('click', () => {
-        const newUsers = usersData.filter(user => user.id !== item.id);  
-        const usersJson  = JSON.stringify(newUsers);
-        localStorage.setItem('users', usersJson);
+        deleteUser(item.id);
         userElement.remove();
       });
 
@@ -46,15 +56,18 @@ async function getUsers() {
       usersContainer.append(userElement);
       userElement.append(deleteUserBtn);
     });
-
-
-  } catch (error) {
-      massageContainer.textContent = 'Ошибка при загрузке данных';
-  }
 }
 
-// вызовы
+function deleteUser(id) {
+  const users = localStorage.getItem('users');
+  const usersData  = JSON.parse(users);
+  const newUsers = usersData.filter(user => user.id !== id);
+  const saveUserArray = JSON.stringify(newUsers);
+  localStorage.setItem('users', saveUserArray);
+}
 
+
+// вызовы
 
 getUsersBut.addEventListener('click', () => {
   if (usersContainer.children.length > 0) {
@@ -70,4 +83,7 @@ deleteAllUsersBut.addEventListener('click', () => {
 })
 
 
-                        
+// вывов главной фукции                 
+getUsers();
+
+  
